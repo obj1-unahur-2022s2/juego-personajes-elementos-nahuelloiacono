@@ -13,13 +13,14 @@ object floki {
 }
 
 object mario {
-	var valorRecoletado = 0
+	var valorRecolectado = 0
 	var ultimoElementoVisitado
+	method valorRecolectado() = valorRecolectado
 	method encontrar(elemento) {
-		valorRecoletado += elemento.valorOtorgado()
+		valorRecolectado += elemento.valorOtorgado()
 		elemento.recibirTrabajo()
 		ultimoElementoVisitado = elemento
 	}
-	method estaFeliz() = valorRecoletado >= 50 
+	method estaFeliz() = valorRecolectado >= 50 
 	|| ultimoElementoVisitado.altura() >= 10
 }
